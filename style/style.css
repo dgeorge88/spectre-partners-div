@@ -1,0 +1,51 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* repeat variables */
+.partners {
+  --repeat: auto-fit;
+}
+@media (min-width: calc(250px * 3)) {
+  .partners {
+    --repeat: 3;
+  }
+}
+
+/* main div photo styles */
+.partners {
+  display: grid;
+  padding: 20px;
+  grid-template-columns: repeat(
+    var(--repeat, auto-fit),
+    minmax(calc(250px * 1), 1fr)
+  );
+  grid-gap: 10px;
+  margin: auto;
+}
+
+/* image styles*/
+.partner-title {
+  text-align: left;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.partner-container {
+  margin: 0 auto;
+  width: 250px;
+}
+
+/* image */
+.partner-container img {
+  /* margin: auto; */
+  /* adjustable height and width */
+  height: 45px;
+  width: 45px;
+
+  /* min-height: 250px;
+  min-width: 250px; */
+}
